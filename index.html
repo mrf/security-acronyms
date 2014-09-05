@@ -43,10 +43,10 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
         <section>
-          <h1>XSS, CSRF and Other Acronyms You Need to Know</h1>
+          <h2>XSS, CSRF and Other Acronyms You Need to Know</h2>
         </section>
         <section>
-          http://mrf.github.io/acronyms
+          http://mrf.github.io/security-acronyms
         </section>
         <section>
           <h2>About Me:</h2>
@@ -200,6 +200,121 @@ function security_presentation_arg_example_view() {
         </section>
         <section>
           <h1>SQL Injection</h1>
+        </section>
+        <section>
+          <img src="images/sql-content-type.png" />
+        </section>
+        <section>
+          <pre>
+            <code>
+function security_presentation_sql_example_view() {
+  $content_type = variable_get('security_presentation_type');
+  $result = db_query("SELECT title, type FROM {node} //
+      where type = '" . $content_type. "'");
+  $output = '';
+  print_r($result, true);
+  foreach ($result as $record) {
+    $output .= $record->type;
+    $output .= ': ';
+    $output .= $record->title;
+    $output .= '<br />';
+  }
+  return $output;
+}
+            </code>
+          </pre>
+        </section>
+        <section>
+          <img src="images/sql-content-type-good-results.png" />
+        </section>
+        <section>
+          <img src="images/sql-content-type-broken-query.png" />
+        </section>
+        <section>
+          <img src="images/sql-content-type-error.png" />
+        </section>
+        <section>
+          <img src="images/sql-content-type-bad-query.png" />
+        </section>
+        <section>
+          <img src="images/sql-content-type-empty.png" />
+        </section>
+        <section>
+          <img src="images/sql-mysql-empty.png" />
+        </section>
+        <section>
+          <img src="images/sql-content-type-worse-query.png" />
+        </section>
+        <section>
+          <img src="images/sql-truncated-users.png" />
+        </section>
+        <section>
+          <img src="images/bobby-tables.png" />
+          <br />
+          <small>http://xkcd.com/327</small>
+        </section>
+        <section>
+          <pre>
+            <code>
+function security_presentation_sql_example_view() {
+  $content_type = variable_get('security_presentation_type');
+  $result = db_query("SELECT title, type FROM {node} //
+      where type = :type", array(':type' =>  $content_type));
+  $output = '';
+  print_r($result, true);
+  foreach ($result as $record) {
+    $output .= $record->type;
+    $output .= ': ';
+    $output .= $record->title;
+    $output .= '<br />';
+  }
+  return $output;
+}
+            </code>
+          </pre>
+        </section>
+        <section>
+          <h3>And a short break while we re-install Drupal...</h3>
+        </section>
+        <section>
+          <h1>CSRF</h1>
+        </section>
+        <section>
+          <pre>
+            <code>
+function security_presentation_csrf_example_view() {
+  $output = '<form name="myform" method="post" //
+      action="examples/csrf_submit">';
+  $output .= "<label>Name:<input type='text' //
+      id='name' name='name'></label>";
+  $output .= '<input type="submit" value="Save">';
+  $output .= '</form>';
+  return $output;
+}
+
+
+function security_presentation_csrf_example_submit() {
+  return check_plain($_POST['name']);
+}
+            </code>
+          </pre>
+        </section>
+        <section>
+          <img src="images/csrf-form.png" />
+        </section>
+        <section>
+          <img src="images/csrf-form-submission.png" />
+        </section>
+        <section>
+          <h1>USE FAPI!</h1>
+        </section>
+        <section>
+          <h2>Questions?</h2>
+          <br />
+          <h3>Mark Ferree</h3>
+          <h4>@mrf</h4>
+          <br />
+          <img src="images/c3.png" />
         </section>
 
 </div>
