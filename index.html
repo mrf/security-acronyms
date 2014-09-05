@@ -17,6 +17,9 @@
 		<link rel="stylesheet" href="css/reveal-custom.css">
 		<link rel="stylesheet" href="css/theme/night-custom.css" id="theme">
 
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
 		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
 		<script>
 			if( window.location.search.match( /print-pdf/gi ) ) {
@@ -92,29 +95,113 @@
           <h2>Validation vs. Sanitization</h2>
         </section>
         <section>
-          <h1>CSRF</h1>
+        <pre>
+          <code>
+function security_presentation_form_example($form, &$form_state) {
+  $form['description'] = array(
+    '#type' => 'item',
+    '#title' => t('A form with nothing but a textfield'),
+  );
+  $form['name'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Name'),
+  );
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => 'Submit',
+  );
+  return $form;
+}
+          </code>
+        </pre>
+        </section>
+        <section>
+          <img src="images/form-xss.png" />
+        </section>
+        <section>
+        <pre>
+          <code>
+function security_presentation_form_example_submit($form, &$form_state) {
+   $my_name = $form_state['values']['name'];
+   variable_set('security_presentation_name', $my_name);
+   drupal_goto('examples/form_example/output');
+}
+          </code>
+        </pre>
+        </section>
+        <section>
+        <pre>
+          <code>
+function security_presentation_form_example_view() {
+  $name_value = variable_get('security_presentation_name');
+  return $name_value;
+}
+          </code>
+        </pre>
+        </section>
+        <section>
+          <img src="images/form-xss-alert.png" />
+        </section>
+        <section>
+        <pre>
+          <code>
+function security_presentation_form_example_view() {
+  $name_value = variable_get('security_presentation_name');
+  $name_value = check_plain(variable_get('security_presentation_name'));
+  return $name_value;
+}
+          </code>
+        </pre>
+        </section>
+        <section>
+          <img src="images/form-xss-checkplain.png" />
+        </section>
+        <section>
+        <pre>
+          <code>
+function security_presentation_form_example_view() {
+  $name_value = variable_get('security_presentation_name');
+  $name_value = t("Translated name: @name", array('@name' => $name_value));
+  return $name_value;
+}
+          </code>
+        </pre>
+        </section>
+        <section>
+          <img src="images/form-xss-t.png" />
+        </section>
+        <section>
+          <h2>URL Arguments</h2>
+        </section>
+        <section>
+        <pre>
+          <code>
+function security_presentation_arg_example_view() {
+  $myvalue = arg(3);
+  return $myvalue;
+}
+          </code>
+        </pre>
+        </section>
+        <section>
+          <img src="images/arg-not-empty.png" />
+        </section>
+        <section>
+          <img src="images/arg-script.png" />
+        </section>
+        <section>
+          <img src="images/arg-script-source.png" />
+        </section>
+        <section>
+          <img src="images/arg-body.png" />
+        </section>
+        <section>
+          <img src="images/arg-chrome-xss.png" />
+        </section>
+        <section>
+          <h1>SQL Injection</h1>
         </section>
 
-<section>
-<h2>Pretty Code</h2>
-<pre><code class="javascript">
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-</code></pre>
-<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-</section>
 </div>
 </div>
 <script src="lib/js/head.min.js"></script>

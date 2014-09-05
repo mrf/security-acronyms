@@ -320,11 +320,10 @@ body {
 .reveal pre {
 	display: block;
 	position: relative;
-	width: 90%;
 	margin: 15px auto;
 
 	text-align: left;
-	font-size: 0.55em;
+	font-size: 0.75em;
 	font-family: monospace;
 	line-height: 1.2em;
 
@@ -339,9 +338,9 @@ body {
 
 .reveal pre code {
 	padding: 5px;
-	overflow: auto;
-	max-height: 400px;
+	overflow: hidden;
 	word-wrap: normal;
+  width: 130%;
 }
 .reveal pre.stretch code {
 	height: 100%;
@@ -563,9 +562,9 @@ body {
 .reveal .slides>section>section {
 	display: none;
 	position: absolute;
-	width: 100%;
 	padding: 20px 0px;
 
+  width: 100%;
 	z-index: 10;
 	line-height: 1.2em;
 	font-weight: inherit;
