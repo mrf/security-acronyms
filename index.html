@@ -279,13 +279,13 @@ function security_presentation_sql_example_view() {
         <section>
           <h1>CSRF</h1>
         </section>
-        <section>
+        <section style="font-size: 0.8em">
           <pre>
             <code>
 function security_presentation_csrf_example_view() {
-  $output = '<form name="myform" method="post" //
+  $output = '<form name="myform" method="post"
       action="examples/csrf_submit">';
-  $output .= "<label>Name:<input type='text' //
+  $output .= "<label>Name:<input type='text'
       id='name' name='name'></label>";
   $output .= '<input type="submit" value="Save">';
   $output .= '</form>';
