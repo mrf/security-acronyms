@@ -4,9 +4,9 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Keeping Open Source Open</title>
+		<title>XSS, CSRF and Other Acronyms You Need to Know</title>
 
-		<meta name="description" content="Keeping Open Source Open">
+		<meta name="description" content="XSS, CSRF and Other Acronyms You Need to Know">
 		<meta name="author" content="Mark Ferree">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -39,339 +39,112 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
-          <h1>Keeping Open Source Open</h1>
-				</section>
         <section>
-          http://mrf.github.io/keeping-os-open
+          <h1>XSS, CSRF and Other Acronyms You Need to Know</h1>
         </section>
-				<section>
+        <section>
+          http://mrf.github.io/acronyms
+        </section>
+        <section>
           <h2>About Me:</h2>
           <br />
           <h3>Mark Ferree</h3>
           <h4>@mrf</h4>
           <br />
           <img src="images/c3.png" />
-				</section>
-				<section>
-          <h2>How do we turn:</h2>
-          <q>I love computers!</q>
-				</section>
-				<section>
-          <h2>Into:</h2>
-          <q>I bend computers to my will!</q>
-				</section>
-				<section>
-          <h1>Barriers to working on open source</h1>
-				</section>
-				<section>
-          <ul>
-            <li>Knowing a programming language well</li>
-            <li>Using source control</li>
-            <li>How to set up a dev environment</li>
-            <li>Issue tracking software</li>
-            <li>Patch management</li>
-            <li>Written English</li>
-            <li>Negotiation skills</li>
-          </ul>
-				</section>
-				<section>
-          <h2>Start Reading</h2>
-          <img height="520px" src="images/library.jpg" />
-            <small>https://www.flickr.com/photos/cdevers/5702488800</small>
-					<aside class="notes">
-          </aside>
-				</section>
-				<section>
-          <h2>Go Back to School</h2>
-          <img height="520px" src="images/compsci-only.jpg" />
-            <small>https://www.flickr.com/photos/jdhancock/3371243601</small>
-					<aside class="notes">
+        </section>
+        <section>
+          <h2>Spoiler Alert:</h2>
+        </section>
+        <section>
+          <h2>Don't trust user input</h2>
+        </section>
+        <section>
+          <h2>Tricky Part:</h2>
+        </section>
+        <section>
+          <h2>User input can mean a lot of things</h2>
+        </section>
+
+        <section>
+          <img height="520px" src="images/wordcloud.png" />
+          <small>http://www.wordle.net/</small>
+          <aside class="notes">
             Computer science as premature optimization
           </aside>
-				</section>
-				<section>
-          <h2>Get a Job</h2>
-          <img height="520px" src="images/hiring.jpg" alt="Now hiring" />
-            <small>https://www.flickr.com/photos/sarahbelle1/3442747012</small>
-					<aside class="notes">
-            Mentorship is key
-          </aside>
-				</section>
-        <section>
-          <h1>I just want to make a website...</h1>
-        </section>
-				<section>
-          <img height="520px" src="images/druplicon.png" alt="Druplicon" />
-				</section>
-				<section>
-        <!-- Maybe split into separate slides -->
-        <ul>
-          <li>Off the shelf look and feel OK?</li>
-          <li>Can you follow tutorials online?</li>
-          <li>Love clicking checkboxes?</li>
-        </ul>
-				</section>
-        <section>
-          <h2>You're already a site builder</h2>
         </section>
         <section>
-          <h2>Site Builders:</h2>
-          <ul>
-            <li>Use functionality built by others</li>
-            <li>Don't have too many custom requirements</li>
-            <li>Don't necessarily know any code</li>
-            <li>Love clicking checkboxes</li>
-          </ul>
+          <h2>There are a lot of things to worry about</h2>
         </section>
         <section>
-          <h2>REALLY love checkboxes</h2>
+          <h2>Don't Panic</h2>
         </section>
         <section>
-          <img src="images/checkboxes.png" />
+          <h2>The Big Ones:</h2>
         </section>
         <section>
-          <img src="images/checkboxes2.png" />
-          <aside class="notes">
-            Importantly don't need any skills different than learning any application 
-          </aside>
+          <h1>XSS</h1>
         </section>
         <section>
-          <h2>Site builders are encouraged to contribute by:</h2>
+          <h2>Sanitization on output</h2>
         </section>
         <section>
-          <h2>Filing issues</h2>
+          <h2>Validation vs. Sanitization</h2>
         </section>
         <section>
-          <h2>Testing and QA'ing new functionality and bug fixes</h2>
+          <h1>CSRF</h1>
         </section>
-        <section>
-          <h2>Writing documentation</h2>
-        </section>
-        <section>
-          <h1>But I really don't like how my site looks</h1>
-        </section>
-        <section>
-          <ul>
-            <li>Learn some HTML</li>
-            <li>Learn some CSS</li>
-            <li>Learn Drupal's theme layer</li>
-            <li>Learn a bit of PHP for the theme layer</li>
-          </ul>
-        </section>
-        <section>
-          <h2>Now you're a themer</h2>
-        </section>
-        <section>
-          <h2>Themers:</h2>
-          <ul>
-            <li>Stay in the presentation layer</li>
-            <li>Don't have too many custom requirements</li>
-          </ul>
-        </section>
-        <section>
-          <h2>Themers are encouraged to contribute by:</h2>
-        </section>
-        <section>
-          <h2>Filing issues</h2>
-        </section>
-        <section>
-          <h2>Testing and QA'ing new functionality and bug fixes</h2>
-        </section>
-        <section>
-          <h2>Writing documentation</h2>
-        </section>
-        <section>
-          <h2>Contributing themes</h2>
-        </section>
-        <section>
-          <h2>Contributing code to front end issues</h2>
-        </section>
-        <section>
-          <h1>Now I need something custom</h1>
-        </section>
-        <section>
-          <ul>
-            <li>Learn some more PHP</li>
-            <li>Learn Drupal's APIs and Hook System</li>
-            <li>Learn Git</li>
-            <li>Learn how to create and apply patches</li>
-          </ul>
-        </section>
-        <section>
-          <h2>Now you're a module developer</h2>
-        </section>
-        <section>
-          <h2>Module developers are encouraged to contribute by:</h2>
-        </section>
-        <section>
-          <h2>Filing issues</h2>
-        </section>
-        <section>
-          <h2>Testing and QA'ing new functionality and bug fixes</h2>
-        </section>
-        <section>
-          <h2>Writing documentation</h2>
-        </section>
-        <section>
-          <h2>Fixing issues in existing modules</h2>
-        </section>
-        <section>
-          <h2>Creating new modules</h2>
-        </section>
-        <section>
-          <h1>Drupal itself really doesn't meet my needs</h1>
-        </section>
-        <section>
-          <ul>
-            <li>Learn a lot more PHP</li>
-            <li>Learn most of Drupals APIs and Hooks</li>
-            <li>Learn negotiation in module issue queues</li>
-          </ul>
-        </section>
-        <section>
-          <h2>Now you're a core developer</h2>
-        </section>
-				<section>
-          <ul>
-            <li>Know a programming language &#10004;</li>
-            <li>Using source control &#10004;</li>
-            <li>How to set up a dev environment &#10004;</li>
-            <li>Issue tracking software &#10004;</li>
-            <li>Patch management &#10004;</li>
-            <li>Written English &#10004;</li>
-            <li>Negotiation skills &#10004;</li>
-          </ul>
-				</section>
-        <section>
-          <h2>Everyone goes as many layers deep as they are comfortable with</h2>
-        </section>
-        <section>
-          <h2>Some start out with many or all of these skills</h2>
-          <aside class="notes">
-            Comp Sci PHD may be building a website for his kids soccer team...
-          </aside>
-        </section>
-        <section>
-          <h2>How does the Drupal community help encourage the progression to happen?</h2>
-        </section>
-        <section>
-          <img src="images/drupaldojo-logo.png" />
-          <aside class="notes">
-            2006
-          </aside>
-        </section>
-        <section>
-          <img src="images/ladder.jpg" />
-        </section>
-        <section>
-          <h2>Meetups</h2>
-          <h2>Camps</h2>
-          <h2>Conferences</h2>
-        </section>
-        <section>
-          <h2>Sprints</h2>
-        </section>
-        <section>
-          <h2>Core Office Hours</h2>
-        </section>
-        <section>
-          <h2>Cultivation Grants</h2>
-        </section>
-        <section>
-          <h2>Blogs</h2>
-          <h2>Podcasts</h2>
-        </section>
-        <section>
-          <h2>Books</h2>
-          <h2>Video Tutorials</h2>
-          <h2>Trainings</h2>
-        </section>
-        <section>
-          <img height="550px" src="images/clouds.jpg" />
-          <h2 style="width: 500px; margin-left: 500px; position: absolute; top: 50px;">Not all rainbows and unicorns</h2>
-          <small>https://www.flickr.com/photos/rachelrusinski/2699175117</small>
-        </section>
-        <section>
-          <img height="580px" src="images/learningcliff.png" />
-        </section>
-        <section>
-          <img src="images/d8logo.png" />
-        </section>
-        <section>
-          <h2>Object Oriented</h2>
-          <aside class="notes">
-            Way you feel about functional programming they feel about this
-          </aside>
-        </section>
-        <section>
-          <h2>Configuration Management System</h2>
-          <aside class="notes">
-            Way you feel about functional programming they feel about this
-          </aside>
-        </section>
-        <section>
-          <h3>Symfony</h3>
-          <h3>Doctrine</h3>
-          <h3>Guzzle</h3>
-          <h3>Twig</h3>
-          <h3>PHPUnit</h3>
-        </section>
-        <section>
-          <h2>9090 Modules To Be Ported</h2>
-          <aside class="notes">
-            We got the contributors this far we can push them the next step
-          </aside>
-        </section>
-        <section>
-          <img src="images/fork.jpg" />
-          <small>https://www.flickr.com/photos/nanagyei/6744708487</small>
-        </section>
-        <section>
-          <h2>Lessons to be applied:</h2>
-        </section>
-        <section>
-          <h2>All contributions are important</h2>
-        </section>
-        <section>
-          <h2>Users need to be engaged as well as developers</h2>
-        </section>
-        <section>
-          <h2>Those with the skills != those with the time to contribute</h2>
-        </section>
-        <section>
-          <h1>Questions?</h1>
-        </section>
-			</div>
-		</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
+<section>
+<h2>Pretty Code</h2>
+<pre><code class="javascript">
+function linkify( selector ) {
+  if( supports3DTransforms ) {
 
-		<script>
+    var nodes = document.querySelectorAll( selector );
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+      var node = nodes[i];
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+      if( !node.className ) {
+        node.className += ' roll';
+      }
+    }
+  }
+}
+</code></pre>
+<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+</section>
+</div>
+</div>
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
 
-				// Parallax scrolling
-				 parallaxBackgroundImage: 'images/reveal-parallax-dark.jpg',
-				 parallaxBackgroundSize: '2100px 900px',
+<script>
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+controls: true,
+progress: true,
+history: true,
+center: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+// Parallax scrolling
+parallaxBackgroundImage: 'images/reveal-parallax-dark.jpg',
+parallaxBackgroundSize: '2100px 900px',
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+]
+});
 
 		</script>
 

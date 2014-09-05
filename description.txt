@@ -1,0 +1,5 @@
+Every Drupal developer who writes PHP code that gets deployed to a public server should have an understanding of how common security vulnerabilities work and how they can be prevented.
+
+In this session I will cover the most common security vulnerabilites, give examples of how they might be accidentally included in your Drupal code and cover the steps to fix the examples and protect yourself.
+
+A basic understanding of PHP is needed, but all examples will be accessible to beginning programmers.

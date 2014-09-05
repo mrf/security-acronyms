@@ -1,0 +1,1 @@
+MITM XSS XSRF SQL-Injection CRLF-Injection XPATH-Injection XFS XSHM EAR XMLRPC Clickjacking XMLHttpRequest REGEX TLS
